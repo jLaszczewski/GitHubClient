@@ -21,11 +21,8 @@ class AppCoordinator: Coordinator {
     }
 
     func start() {
-        // (WARNING) Remove the lines below. The initial controller should be replace by the one you're going to use in the app.
-        
-        guard let repositoryViewController = UIStoryboard.init(name: "RepositoryList", bundle: nil).instantiateInitialViewController() else { return }
-        
-        present(viewController: repositoryViewController)
+        let repositoryTableCoordinator = RepositoryTableCoordinator(presentation: presentation)
+        repositoryTableCoordinator.start()
 
     }
 }

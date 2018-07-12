@@ -9,12 +9,12 @@
 import RxSwift
 
 class TableViewCell<T>: UITableViewCell {
-    var cellViewModel: T!
+    var viewModel: T!
 
     var disposeBag = DisposeBag()
 
     func configure(withViewModel viewModel: T) {
-        cellViewModel = viewModel
+        self.viewModel = viewModel
     }
 
     override func prepareForReuse() {

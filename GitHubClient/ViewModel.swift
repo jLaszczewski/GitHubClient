@@ -9,5 +9,11 @@
 import Foundation
 
 class ViewModel {
+    
+}
 
+protocol CellsDataSource {
+    func numberOfSections() -> Int
+    func numberOfRows(forSection section: Int) -> Int
+    func tableViewCell(forIndexPath indexPath: IndexPath) -> TableViewCell<Any>
 }

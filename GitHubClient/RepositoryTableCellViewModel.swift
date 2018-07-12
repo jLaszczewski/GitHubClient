@@ -1,31 +1,24 @@
-//  
-//  RepositoryListViewModel.swift
+//
+//  RepositoryTableCellViewModel.swift
 //  GitHubClient
 //
 //  Created by Jakub Łaszczewski on 12/07/2018.
 //  Copyright © 2018 Jakub Łaszczewski. All rights reserved.
 //
 
-import Foundation
+import RxSwift
 
-final class RepositoryListViewModel: ViewModel {
+final class RepositoryTableCellViewModel: ViewModel {
+
     struct Dependencies {
 
     }
+
     fileprivate let dependencies: Dependencies
 
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
-    }
-}
-
-// MARK: - BlackBox
-extension RepositoryListViewModel {
-    struct Input {
-
-    }
-
-    struct Output {
+        super.init()
 
     }
 }
