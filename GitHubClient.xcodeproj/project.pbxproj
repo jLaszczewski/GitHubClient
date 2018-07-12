@@ -10,6 +10,8 @@
 		0542987D20F783F600D1CB9B /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0542987A20F783F600D1CB9B /* RepositoryTableViewCell.xib */; };
 		0542987E20F783F600D1CB9B /* RepositoryTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0542987B20F783F600D1CB9B /* RepositoryTableCellViewModel.swift */; };
 		0542987F20F783F600D1CB9B /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0542987C20F783F600D1CB9B /* RepositoryTableViewCell.swift */; };
+		05BB105420F79552008565FE /* RepositoryTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB105320F79552008565FE /* RepositoryTableModel.swift */; };
+		05BB105620F79C9C008565FE /* dumbJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 05BB105520F79C9C008565FE /* dumbJSON.json */; };
 		05E1D17C20F79082006FD036 /* RepositoryTableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E1D17B20F79082006FD036 /* RepositoryTableNavigationController.swift */; };
 		05E3681720F74D6E0099E2A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05E3681620F74D6E0099E2A6 /* Info.plist */; };
 		05E3681A20F74D6E0099E2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E3681920F74D6E0099E2A6 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		0542987A20F783F600D1CB9B /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		0542987B20F783F600D1CB9B /* RepositoryTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableCellViewModel.swift; sourceTree = "<group>"; };
 		0542987C20F783F600D1CB9B /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		05BB105320F79552008565FE /* RepositoryTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableModel.swift; sourceTree = "<group>"; };
+		05BB105520F79C9C008565FE /* dumbJSON.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = dumbJSON.json; sourceTree = "<group>"; };
 		05E1D17B20F79082006FD036 /* RepositoryTableNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableNavigationController.swift; sourceTree = "<group>"; };
 		05E3681220F74D6E0099E2A6 /* GitHubClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E3681620F74D6E0099E2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,6 +128,14 @@
 			name = RepositoryList;
 			sourceTree = "<group>";
 		};
+		05E1D17D20F794F1006FD036 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				05BB105320F79552008565FE /* RepositoryTableModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		05E3680820F74D6E0099E2A6 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				05E3681B20F74D6E0099E2A6 /* AppDelegate.swift */,
+				05E1D17D20F794F1006FD036 /* Models */,
 				05F21EFD20F764E4000CDAA4 /* Views */,
 				05E3681820F74D6E0099E2A6 /* Resources */,
 				05E3681D20F74D6E0099E2A6 /* Non-iOS Resources */,
@@ -163,6 +176,7 @@
 				05E3681620F74D6E0099E2A6 /* Info.plist */,
 				05E3684D20F74D6E0099E2A6 /* LaunchScreen.storyboard */,
 				05F21EFA20F760B7000CDAA4 /* Localizable.strings */,
+				05BB105520F79C9C008565FE /* dumbJSON.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -319,6 +333,7 @@
 				05E3681A20F74D6E0099E2A6 /* Assets.xcassets in Resources */,
 				05E3684920F74D6E0099E2A6 /* Colors.xcassets in Resources */,
 				05E3681720F74D6E0099E2A6 /* Info.plist in Resources */,
+				05BB105620F79C9C008565FE /* dumbJSON.json in Resources */,
 				05F21EFC20F760B7000CDAA4 /* Localizable.strings in Resources */,
 				05F21F0520F76523000CDAA4 /* RepositoryTable.storyboard in Resources */,
 				0542987D20F783F600D1CB9B /* RepositoryTableViewCell.xib in Resources */,
@@ -442,6 +457,7 @@
 				05E3683920F74D6E0099E2A6 /* Appearance.swift in Sources */,
 				05F21F0320F764F2000CDAA4 /* RepositoryTableViewController.swift in Sources */,
 				05E3681C20F74D6E0099E2A6 /* AppDelegate.swift in Sources */,
+				05BB105420F79552008565FE /* RepositoryTableModel.swift in Sources */,
 				05E3683720F74D6E0099E2A6 /* AppCoordinator.swift in Sources */,
 				05F21F0120F764F2000CDAA4 /* RepositoryTableViewModel.swift in Sources */,
 				05E3682A20F74D6E0099E2A6 /* ImagesGen.swift in Sources */,
