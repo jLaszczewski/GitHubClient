@@ -1,0 +1,2 @@
+#SwiftGen Colors
+#BlueExample                : #0000ff
