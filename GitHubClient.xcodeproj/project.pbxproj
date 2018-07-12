@@ -31,6 +31,7 @@
 		05E3684C20F74D6E0099E2A6 /* UIWindow+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E3684B20F74D6E0099E2A6 /* UIWindow+Animations.swift */; };
 		05E3684F20F74D6E0099E2A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E3684D20F74D6E0099E2A6 /* LaunchScreen.storyboard */; };
 		05E3685220F74D6E0099E2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E3685020F74D6E0099E2A6 /* Main.storyboard */; };
+		05F21EFC20F760B7000CDAA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05F21EFA20F760B7000CDAA4 /* Localizable.strings */; };
 		BF5C3C3101273A20E2163532 /* Pods_GitHubClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31855A8538AF344BE06C7F8D /* Pods_GitHubClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		05E3684B20F74D6E0099E2A6 /* UIWindow+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Animations.swift"; sourceTree = "<group>"; };
 		05E3684E20F74D6E0099E2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05E3685120F74D6E0099E2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05F21EFB20F760B7000CDAA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		31855A8538AF344BE06C7F8D /* Pods_GitHubClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FDE7EE3B82E7DFAFD66659 /* Pods-GitHubClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubClient/Pods-GitHubClient.debug.xcconfig"; sourceTree = "<group>"; };
 		D95F0F97A7F89FDF1DED22C2 /* Pods-GitHubClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubClient/Pods-GitHubClient.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				05E3681620F74D6E0099E2A6 /* Info.plist */,
 				05E3684D20F74D6E0099E2A6 /* LaunchScreen.storyboard */,
+				05F21EFA20F760B7000CDAA4 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				05E3681A20F74D6E0099E2A6 /* Assets.xcassets in Resources */,
 				05E3684920F74D6E0099E2A6 /* Colors.xcassets in Resources */,
 				05E3681720F74D6E0099E2A6 /* Info.plist in Resources */,
+				05F21EFC20F760B7000CDAA4 /* Localizable.strings in Resources */,
 				05E3685220F74D6E0099E2A6 /* Main.storyboard in Resources */,
 				05E3684F20F74D6E0099E2A6 /* LaunchScreen.storyboard in Resources */,
 				05E3682620F74D6E0099E2A6 /* colors.txt in Resources */,
@@ -407,6 +411,14 @@
 				05E3685120F74D6E0099E2A6 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		05F21EFA20F760B7000CDAA4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05F21EFB20F760B7000CDAA4 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
