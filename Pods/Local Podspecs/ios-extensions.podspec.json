@@ -1,0 +1,22 @@
+{
+  "name": "ios-extensions",
+  "version": "0.1.0",
+  "summary": "Common used extensions.",
+  "description": "Common used extensions.",
+  "homepage": "https://bitbucket.org/appchance/ios-extensions.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Appchance": "info@appchance.com"
+  },
+  "source": {
+    "git": "https://MateuszTyl@bitbucket.org/appchance/ios-extensions.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "ios-extensions/Classes/**/*"
+}

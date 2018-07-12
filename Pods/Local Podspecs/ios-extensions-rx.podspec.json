@@ -1,0 +1,33 @@
+{
+  "name": "ios-extensions-rx",
+  "version": "0.2.0",
+  "summary": "Common used rx extensions.",
+  "description": "Common used rx extensions.",
+  "homepage": "https://bitbucket.org/appchance/ios-extensions-rx.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Appchance": "info@appchance.com"
+  },
+  "source": {
+    "git": "https://MateuszTyl@bitbucket.org/appchance/ios-extensions-rx.git",
+    "tag": "0.2.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "ios-extensions-rx/Classes/**/*",
+  "dependencies": {
+    "RxSwift": [
+      "~> 4.0"
+    ],
+    "RxCocoa": [
+      "~> 4.0"
+    ],
+    "RxGesture": [
+      "~> 1.2"
+    ]
+  }
+}

@@ -31,6 +31,7 @@
 		05E3684C20F74D6E0099E2A6 /* UIWindow+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E3684B20F74D6E0099E2A6 /* UIWindow+Animations.swift */; };
 		05E3684F20F74D6E0099E2A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E3684D20F74D6E0099E2A6 /* LaunchScreen.storyboard */; };
 		05E3685220F74D6E0099E2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E3685020F74D6E0099E2A6 /* Main.storyboard */; };
+		BF5C3C3101273A20E2163532 /* Pods_GitHubClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31855A8538AF344BE06C7F8D /* Pods_GitHubClient.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,9 @@
 		05E3684B20F74D6E0099E2A6 /* UIWindow+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Animations.swift"; sourceTree = "<group>"; };
 		05E3684E20F74D6E0099E2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05E3685120F74D6E0099E2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		31855A8538AF344BE06C7F8D /* Pods_GitHubClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5FDE7EE3B82E7DFAFD66659 /* Pods-GitHubClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubClient/Pods-GitHubClient.debug.xcconfig"; sourceTree = "<group>"; };
+		D95F0F97A7F89FDF1DED22C2 /* Pods-GitHubClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubClient/Pods-GitHubClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5C3C3101273A20E2163532 /* Pods_GitHubClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,8 @@
 			children = (
 				05E3681420F74D6E0099E2A6 /* GitHubClient */,
 				05E3681320F74D6E0099E2A6 /* Products */,
+				B6A011723FBDB7104050AD8F /* Pods */,
+				2D97785E2184EBFA05A6C76C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +186,23 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		2D97785E2184EBFA05A6C76C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31855A8538AF344BE06C7F8D /* Pods_GitHubClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6A011723FBDB7104050AD8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5FDE7EE3B82E7DFAFD66659 /* Pods-GitHubClient.debug.xcconfig */,
+				D95F0F97A7F89FDF1DED22C2 /* Pods-GitHubClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,10 +210,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05E3685520F74D6E0099E2A6 /* Build configuration list for PBXNativeTarget "GitHubClient" */;
 			buildPhases = (
+				2CB9D382BBE554547C8BA40E /* [CP] Check Pods Manifest.lock */,
 				05E3680D20F74D6E0099E2A6 /* Sources */,
 				05E3680E20F74D6E0099E2A6 /* Frameworks */,
 				05E3680F20F74D6E0099E2A6 /* Resources */,
 				05E3681020F74D6E0099E2A6 /* Run SwiftLint */,
+				CB8D0586EF89DFD8A6FB3E8D /* [CP] Embed Pods Frameworks */,
+				330A4912FB1C7436ABEEAFCE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,6 +290,77 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
+		};
+		2CB9D382BBE554547C8BA40E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GitHubClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		330A4912FB1C7436ABEEAFCE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitHubClient/Pods-GitHubClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB8D0586EF89DFD8A6FB3E8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GitHubClient/Pods-GitHubClient-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DBDebugToolkit/DBDebugToolkit.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+				"${BUILT_PRODUCTS_DIR}/ios-extensions/ios_extensions.framework",
+				"${BUILT_PRODUCTS_DIR}/ios-extensions-rx/ios_extensions_rx.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DBDebugToolkit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ios_extensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ios_extensions_rx.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitHubClient/Pods-GitHubClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -430,6 +528,7 @@
 		};
 		05E3685620F74D6E0099E2A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5FDE7EE3B82E7DFAFD66659 /* Pods-GitHubClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +547,7 @@
 		};
 		05E3685720F74D6E0099E2A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D95F0F97A7F89FDF1DED22C2 /* Pods-GitHubClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

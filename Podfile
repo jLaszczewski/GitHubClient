@@ -20,10 +20,11 @@ pod 'RxCocoa'
 
 # Utilities
 pod 'SwiftyBeaver'
-pod 'Locksmith'
+#pod 'Locksmith'
 pod 'DBDebugToolkit', :configurations => ['Debug']
 #pod 'Gloss'
 #pod 'Timepiece'
+pod 'Moya/RxSwift', '~> 11.0'
 
 # UI
 pod 'Kingfisher'
