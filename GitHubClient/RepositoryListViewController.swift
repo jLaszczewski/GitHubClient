@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class RepositoryListViewController: View {
+final class RepositoryListViewController: ViewController {
 
     // MARK: Properties
     var viewModel: RepositoryListViewModel!
@@ -25,7 +25,7 @@ final class RepositoryListViewController: View {
 // MARK: - Preparation
 private extension RepositoryListViewController {
     func prepareViewController() {
-
+        title = L10n.locListViewTitle
     }
 }
 
@@ -33,7 +33,7 @@ private extension RepositoryListViewController {
 // MARK: - RxObservers
 private extension RepositoryListViewController {
     func setupRxObservers() {
-      configure(with: viewModel)
+      
 
     }
 }

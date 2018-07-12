@@ -3,6 +3,7 @@
 // swiftlint:disable sorted_imports
 import Foundation
 import UIKit
+import GitHubClient
 
 // swiftlint:disable superfluous_disable_command
 // swiftlint:disable file_length
@@ -61,9 +62,14 @@ internal enum StoryboardScene {
   internal enum Main: StoryboardType {
     internal static let storyboardName = "Main"
 
-    internal static let initialScene = InitialSceneType<ViewController>(storyboard: Main.self)
+    internal static let initialScene = InitialSceneType<GitHubClient.RepositoryListViewController>(storyboard: Main.self)
 
-    internal static let viewController = SceneType<ViewController>(storyboard: Main.self, identifier: "ViewController")
+    internal static let viewController = SceneType<GitHubClient.RepositoryListViewController>(storyboard: Main.self, identifier: "ViewController")
+  }
+  internal enum RepositoryList: StoryboardType {
+    internal static let storyboardName = "RepositoryList"
+
+    internal static let initialScene = InitialSceneType<UINavigationController>(storyboard: RepositoryList.self)
   }
 }
 

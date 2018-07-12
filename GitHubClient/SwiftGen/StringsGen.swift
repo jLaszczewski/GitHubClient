@@ -7,6 +7,8 @@ import Foundation
 
 // swiftlint:disable identifier_name line_length type_body_length
 internal enum L10n {
+  /// en
+  internal static let locLang = L10n.tr("Localizable", "loc_lang")
   /// GitHub Client
   internal static let locListViewTitle = L10n.tr("Localizable", "loc_list_view_title")
 }

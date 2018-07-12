@@ -9,6 +9,16 @@
 import UIKit
 
 final class RepositoryListCoordinator: Coordinator {
+    var presentation: CoordinatorPresentation
+    
+    fileprivate let repositoryListController = StoryboardScene.Main.initialScene
+    
+    init(presentation: CoordinatorPresentation) {
+        self.presentation = presentation
+    }
+    
+    var currentPresentedViewController: UIViewController?
+    
     func start() {
 
     }

@@ -32,6 +32,10 @@
 		05E3684F20F74D6E0099E2A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E3684D20F74D6E0099E2A6 /* LaunchScreen.storyboard */; };
 		05E3685220F74D6E0099E2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E3685020F74D6E0099E2A6 /* Main.storyboard */; };
 		05F21EFC20F760B7000CDAA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05F21EFA20F760B7000CDAA4 /* Localizable.strings */; };
+		05F21F0120F764F2000CDAA4 /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F21EFE20F764F2000CDAA4 /* RepositoryListViewModel.swift */; };
+		05F21F0220F764F2000CDAA4 /* RepositoryListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F21EFF20F764F2000CDAA4 /* RepositoryListCoordinator.swift */; };
+		05F21F0320F764F2000CDAA4 /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F21F0020F764F2000CDAA4 /* RepositoryListViewController.swift */; };
+		05F21F0520F76523000CDAA4 /* RepositoryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05F21F0420F76523000CDAA4 /* RepositoryList.storyboard */; };
 		BF5C3C3101273A20E2163532 /* Pods_GitHubClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31855A8538AF344BE06C7F8D /* Pods_GitHubClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +72,10 @@
 		05E3684E20F74D6E0099E2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05E3685120F74D6E0099E2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05F21EFB20F760B7000CDAA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		05F21EFE20F764F2000CDAA4 /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
+		05F21EFF20F764F2000CDAA4 /* RepositoryListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryListCoordinator.swift; sourceTree = "<group>"; };
+		05F21F0020F764F2000CDAA4 /* RepositoryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
+		05F21F0420F76523000CDAA4 /* RepositoryList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepositoryList.storyboard; sourceTree = "<group>"; };
 		31855A8538AF344BE06C7F8D /* Pods_GitHubClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FDE7EE3B82E7DFAFD66659 /* Pods-GitHubClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubClient/Pods-GitHubClient.debug.xcconfig"; sourceTree = "<group>"; };
 		D95F0F97A7F89FDF1DED22C2 /* Pods-GitHubClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubClient/Pods-GitHubClient.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				05E3681B20F74D6E0099E2A6 /* AppDelegate.swift */,
+				05F21EFD20F764E4000CDAA4 /* Views */,
 				05E3681820F74D6E0099E2A6 /* Resources */,
 				05E3681D20F74D6E0099E2A6 /* Non-iOS Resources */,
 				05E3682420F74D6E0099E2A6 /* SwiftGen */,
@@ -187,6 +196,17 @@
 				05E3684B20F74D6E0099E2A6 /* UIWindow+Animations.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		05F21EFD20F764E4000CDAA4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05F21EFF20F764F2000CDAA4 /* RepositoryListCoordinator.swift */,
+				05F21F0020F764F2000CDAA4 /* RepositoryListViewController.swift */,
+				05F21EFE20F764F2000CDAA4 /* RepositoryListViewModel.swift */,
+				05F21F0420F76523000CDAA4 /* RepositoryList.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		2D97785E2184EBFA05A6C76C /* Frameworks */ = {
@@ -272,6 +292,7 @@
 				05E3684920F74D6E0099E2A6 /* Colors.xcassets in Resources */,
 				05E3681720F74D6E0099E2A6 /* Info.plist in Resources */,
 				05F21EFC20F760B7000CDAA4 /* Localizable.strings in Resources */,
+				05F21F0520F76523000CDAA4 /* RepositoryList.storyboard in Resources */,
 				05E3685220F74D6E0099E2A6 /* Main.storyboard in Resources */,
 				05E3684F20F74D6E0099E2A6 /* LaunchScreen.storyboard in Resources */,
 				05E3682620F74D6E0099E2A6 /* colors.txt in Resources */,
@@ -375,6 +396,7 @@
 			files = (
 				05E3683F20F74D6E0099E2A6 /* TableViewCell.swift in Sources */,
 				05E3683520F74D6E0099E2A6 /* Coordinator.swift in Sources */,
+				05F21F0220F764F2000CDAA4 /* RepositoryListCoordinator.swift in Sources */,
 				05E3683B20F74D6E0099E2A6 /* Constants.swift in Sources */,
 				05E3683D20F74D6E0099E2A6 /* CollectionViewCell.swift in Sources */,
 				05E3683120F74D6E0099E2A6 /* ViewController.swift in Sources */,
@@ -386,8 +408,10 @@
 				05E3684720F74D6E0099E2A6 /* Action.swift in Sources */,
 				05E3684520F74D6E0099E2A6 /* NavigationController.swift in Sources */,
 				05E3683920F74D6E0099E2A6 /* Appearance.swift in Sources */,
+				05F21F0320F764F2000CDAA4 /* RepositoryListViewController.swift in Sources */,
 				05E3681C20F74D6E0099E2A6 /* AppDelegate.swift in Sources */,
 				05E3683720F74D6E0099E2A6 /* AppCoordinator.swift in Sources */,
+				05F21F0120F764F2000CDAA4 /* RepositoryListViewModel.swift in Sources */,
 				05E3682A20F74D6E0099E2A6 /* ImagesGen.swift in Sources */,
 				05E3684120F74D6E0099E2A6 /* View.swift in Sources */,
 				05E3683320F74D6E0099E2A6 /* ViewModel.swift in Sources */,
