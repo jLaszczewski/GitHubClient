@@ -10,7 +10,7 @@ import UIKit
 
 class NavigationController: UINavigationController {
     
-    var didBackFromViewController: CoordinatorAction<UIViewController>?
+    var output = Output()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,17 @@ extension NavigationController: UINavigationControllerDelegate {
             return
         }
         log.info("Did back from \(type(of: fromViewController))")
-        didBackFromViewController?.perform(param: fromViewController)
+        output.coordinator.didBackFromViewController?.perform(param: fromViewController)
+    }
+}
+
+
+extension NavigationController {
+    struct Output {
+        var coordinator = CoordinatorOutput()
+    }
+    
+    struct CoordinatorOutput {
+        var didBackFromViewController: Action<UIViewController>?
     }
 }
