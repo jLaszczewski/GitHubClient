@@ -20,6 +20,25 @@ final class RepositoryTableViewModel: ViewModel {
 
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
+        super.init()
+        
+        self.getRepositories()
+    }
+}
+
+// MARK: - Tools
+extension RepositoryTableViewModel {
+    fileprivate func getRepositories() {
+        if let path = Bundle.main.path(forResource: "dumbJSON", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let tableContent = try? JSONDecoder().decode([RepositoryTableModel].self, from: data)
+                print(tableContent)
+            } catch {
+                print("Problem with json")
+            }
+        }
+        
     }
 }
 

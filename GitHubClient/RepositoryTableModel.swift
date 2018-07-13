@@ -23,9 +23,9 @@ struct RepositoryTableModel: Codable {
 }
 
 struct Owner: Codable {
-    let name: String?
+    let login: String?
     
     private enum CodingKeys: String, CodingKey {
-        case name
+        case login
     }
 }
