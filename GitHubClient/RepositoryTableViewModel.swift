@@ -13,6 +13,8 @@ import RxCocoa
 final class RepositoryTableViewModel: ViewModel {
     let output = Output()
     
+    var repositoryTableData = Variable<[RepositoryTableModel]?>(nil)
+    
     struct Dependencies {
 
     }
@@ -22,7 +24,23 @@ final class RepositoryTableViewModel: ViewModel {
         self.dependencies = dependencies
         super.init()
         
-        self.getRepositories()
+        setupRxObserver()
+        getRepositories()
+    }
+}
+
+// MARK: - RxObservables
+extension RepositoryTableViewModel {
+    fileprivate func setupRxObserver() {
+        setupRepositoryTableDataObserver()
+    }
+    
+    private func setupRepositoryTableDataObserver() {
+        repositoryTableData.asObservable()
+            .subscribe(onNext: { _ in
+                
+            })
+            .disposed(by: disposeBag)
     }
 }
 
@@ -32,8 +50,13 @@ extension RepositoryTableViewModel {
         if let path = Bundle.main.path(forResource: "dumbJSON", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let tableContent = try? JSONDecoder().decode([RepositoryTableModel].self, from: data)
-                print(tableContent)
+                let tableContent = try JSONDecoder().decode([RepositoryTableModel].self, from: data)
+                
+                for row in tableContent {
+                    output.cellViewModels.value.append(
+                        RepositoryTableCellViewModel(dependencies: RepositoryTableCellViewModel.Dependencies(login: BehaviorSubject<String?>(value: row.owner?.login), description: BehaviorSubject<String?>(value: row.description)))
+                    )
+                }
             } catch {
                 print("Problem with json")
             }
@@ -49,14 +72,13 @@ extension RepositoryTableViewModel: CellsDataSource {
     }
     
     func numberOfRows(forSection section: Int) -> Int {
-        return 0
+        return output.cellViewModels.value.count
     }
-    
-    func tableViewCell(forIndexPath indexPath: IndexPath) -> TableViewCell<Any> {
+
+    func tableViewCell(forIndexPath indexPath: IndexPath) -> TableCellViewModel {
         let row = indexPath.row
         return output.cellViewModels.value[row]
     }
-    
     
 }
 
@@ -67,6 +89,6 @@ extension RepositoryTableViewModel {
     }
 
     struct Output {
-        fileprivate let cellViewModels = Variable<[TableViewCell<Any>]>([])
+        fileprivate let cellViewModels = Variable<[RepositoryTableCellViewModel]>([])
     }
 }

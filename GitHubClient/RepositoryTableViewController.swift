@@ -31,6 +31,9 @@ private extension RepositoryTableViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(RepositoryTableViewCell.self)
+        tableView.estimatedRowHeight = 60
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 }
 
@@ -54,9 +57,15 @@ extension RepositoryTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: RepositoryTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-        
-        return cell
+        let cellViewModel = viewModel.tableViewCell(forIndexPath: indexPath)
+        switch cellViewModel {
+        case let repositoryCellViewModel as RepositoryTableCellViewModel:
+            let cell: RepositoryTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+            cell.configure(withViewModel: repositoryCellViewModel)
+            return cell
+        default:
+            return tableView.dequeueReusableCell(forIndexPath: indexPath)
+        }
     }
 }
 

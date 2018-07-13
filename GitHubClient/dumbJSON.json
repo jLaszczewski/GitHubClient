@@ -24,7 +24,7 @@
  },
  "name": "Hello-World",
  "full_name": "octocat/Hello-World",
- "description": "This your first repo!",
+ "description": "This your first repo!\nMore and more content! It's so great to have ability to create dumb content!",
  "private": false,
  "fork": true,
  "url": "https://api.github.com/repos/octocat/Hello-World",
