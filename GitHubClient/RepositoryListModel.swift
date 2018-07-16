@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RepositoryTableModel: Codable {
+struct RepositoryListModel: Codable {
     let id: Int?
     let name: String?
     let owner: Owner?

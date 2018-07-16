@@ -19,7 +19,7 @@ final class RepositoryTableCoordinator: Coordinator {
         guard let repositoryTableNavigationController = UIStoryboard.init(name: "RepositoryTable", bundle: nil).instantiateInitialViewController() as? RepositoryTableNavigationController else { return }
         
         guard let repositoryTableViewController = repositoryTableNavigationController.topViewController as? RepositoryTableViewController else { return }
-        let repositoryTableViewModel = RepositoryTableViewModel(dependencies: RepositoryTableViewModel.Dependencies())
+        let repositoryTableViewModel = RepositoryTableViewModel(dependencies: RepositoryTableViewModel.Dependencies(listService: ListService()))
         
         repositoryTableViewController.viewModel = repositoryTableViewModel
         

@@ -13,11 +13,12 @@ import RxCocoa
 final class RepositoryTableViewModel: ViewModel {
     let output = Output()
     
-    var repositoryTableData = Variable<[RepositoryTableModel]?>(nil)
+    var repositoryTableData = Variable<[RepositoryListModel]?>(nil)
     
     struct Dependencies {
-
+        var listService: ListService
     }
+    
     fileprivate let dependencies: Dependencies
 
     init(dependencies: Dependencies) {
@@ -33,6 +34,15 @@ final class RepositoryTableViewModel: ViewModel {
 extension RepositoryTableViewModel {
     fileprivate func setupRxObserver() {
         setupRepositoryTableDataObserver()
+        setupListObserver()
+    }
+    
+    private func setupListObserver() {
+        dependencies.listService.getList()
+            .subscribe { event in
+                print(event)
+            }
+            .disposed(by: disposeBag)
     }
     
     private func setupRepositoryTableDataObserver() {
@@ -50,7 +60,7 @@ extension RepositoryTableViewModel {
         if let path = Bundle.main.path(forResource: "dumbJSON", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let tableContent = try JSONDecoder().decode([RepositoryTableModel].self, from: data)
+                let tableContent = try JSONDecoder().decode([RepositoryListModel].self, from: data)
                 
                 for row in tableContent {
                     output.cellViewModels.value.append(
